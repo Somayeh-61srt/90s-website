@@ -6,19 +6,21 @@
 
 body {
   background-image: url("images/96534717111943.562b5d2831dc0.gif");
-  background-size:contain ;
+  background-size: contain;
   font-family: "Courier New", Courier, monospace;
 }
 
 a {
-  text-decoration: none;
   color: rgb(39, 25, 24);
   transition: all 0.5s;
 }
 
 a:hover {
-  color: rgb(104, 131, 29);
-  font-size: larger;
+  color: red;
+  transform: scale(1.5);
+  text-decoration: none;
+  border: 2px solid red;
+  border-radius: 40%;
 }
 
 img {
@@ -26,11 +28,26 @@ img {
   display: block;
 }
 
+video {
+  width: 100%;
+}
+
+video::-webkit-media-controls-panel {
+  background-image: linear-gradient(transparent, transparent) !important;
+}
+
 .site-header {
-  height: 10vh;
+  height: 15vh;
   background-color: yellow;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  border-bottom: 3px solid red;
+}
+
+@media (max-width: 767px){
+  .site-header{
+    height: 10vh;
+  }
 }
 
 .site-nav {
@@ -39,9 +56,28 @@ img {
 
 .site-logo {
   margin-left: 2rem;
-  font-size: 20px;
+  font-size: 1.5rem;
   text-decoration: underline;
 }
+
+@media (max-width: 991px) {
+  .site-logo {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-logo {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .site-logo {
+    font-size: .6rem;
+  }
+}
+
 
 .site-menu {
   display: inline;
@@ -52,7 +88,25 @@ img {
   float: right;
   margin-left: 1rem;
   margin-right: 1rem;
-  font-size: 20px;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 991px) {
+  .site-nav-links {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-nav-links {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .site-nav-links {
+    font-size: .6rem;
+  } 
 }
 
 .wrapper {
@@ -66,9 +120,35 @@ img {
   grid-template-columns: 75% 25%;
 }
 
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 100%;
+    margin: 0 1rem;
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .grid {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 599px) {
+  .grid {
+    margin: 0 0.5rem;
+  }
+}
+
 .section {
   background-color: yellow;
-  border: 2px solid;
+  border: 3px solid rgb(13, 139, 202);
   padding: 0.5rem;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -76,7 +156,7 @@ img {
 
 .section-title {
   padding: 0.5rem 0;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid rgb(13, 163, 238);
   text-align: center;
 }
 
@@ -87,102 +167,79 @@ img {
   margin-top: 0.5rem;
 }
 
-.gallery-cast{
-display: grid;
-grid-template-columns: 1fr;
+@media (max-width: 991px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-cast {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 0.5rem;
 }
 
 .gallery-items {
   text-align: center;
 }
 
-.cast-section{
+.cast-section {
   display: flex;
-  padding: 1rem ;
+  padding: 1rem;
 }
 
-.cast-article{
-  font-size: .9rem;
+.cast-article {
+  font-size: 1rem;
   text-align: justify;
   margin-left: 1rem;
 }
 
-video {
-  width: 100%;
-}
-
-video::-webkit-media-controls-panel {
-  background-image: linear-gradient(transparent, transparent) !important;
-}
-
 @media (min-width: 992px) {
-  .grid {
-    margin: 0 1rem;
+  .cast-img {
+    width: 100%;
+    padding: 1rem;
+  }
+  .cast-article {
+    padding: 1rem;
   }
 }
 
-@media (max-width: 991.98px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .grid {
-    margin: 0 1rem;
-  }
-  .site-logo {
-    font-size: 15px;
-  }
-  .site-nav-links {
-    font-size: 15px;
-  }
-  .famous-title{
-    font-size: .7rem;
+@media (max-width: 599px) {
+  .cast-article {
+    font-size: 0.7rem;
   }
 }
 
-@media (max-width: 767.98px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-  .grid {
-    grid-template-columns: 100%;
-    margin: 0 1rem;
-  }
-  .site-logo {
-    font-size: 10px;
-  }
-  .site-nav-links {
-    font-size: 10px;
-  }
+@media (max-width: 991px) {
   .side-image {
     width: 100%;
   }
-  .famous-title{
-    font-size: .8rem;
+  .cast-img {
+    width: 100%;
   }
-  .cast-article{
-    font-size: .7rem;
+  .show-title {
+    font-size: larger;
   }
-}
-
-@media (max-width: 599.98px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-  .grid {
-    grid-template-columns: 100%;
-    margin: 0 0.5rem;
-  }
-  .site-logo {
-    font-size: 10px;
-  }
-  .site-nav-links {
-    font-size: 10px;
-  }
-  .famous-title{
-    font-size: .8rem;
-  }
-  .cast-article{
-    font-size: .7rem;
+  .side-title {
+    font-size: x-large;
   }
 }
 
@@ -190,28 +247,46 @@ video::-webkit-media-controls-panel {
   padding-bottom: 1rem;
 }
 
-.sidebar{
+.sidebar {
   margin-top: 2rem;
 }
 
 .photos-tvshow {
-  border: 2px solid;
+  border: 3px solid rgb(13, 139, 202);
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   background-color: yellow;
   border-radius: 10px;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
 }
 
-.famous-title{
+@media (max-width: 767px) {
+  .photos-tvshow {
+    padding: 1rem 1rem;
+  }
+}
+
+.famous-article {
   text-align: justify;
-  font-size: .9rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 599px) {
+  .famous-article {
+    font-size: 0.8rem;
+  }
 }
 
 .side-title {
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid rgb(13, 163, 238);
   text-align: center;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .side-title {
+    font-size: x-large;
+  }
 }
 
 .show-items {
@@ -223,6 +298,12 @@ video::-webkit-media-controls-panel {
   margin-top: 0.2rem;
 }
 
+@media (max-width: 991px) {
+  .show-title {
+    font-size: larger;
+  }
+}
+
 .side-image {
   transition: all 1s;
 }
@@ -232,12 +313,23 @@ video::-webkit-media-controls-panel {
   box-shadow: 2px 2px 2px 2px red;
 }
 
-.footer{
+@media (max-width: 991px) {
+  .side-image {
+    width: 100%;
+    padding: 0.5rem 3rem;
+  }
+  .cast-img {
+    width: 100%;
+    padding: 0.5rem 3rem;
+  }
+}
+
+.footer {
   background-color: rgb(52, 175, 237);
   height: 18vh;
 }
 
-.foot-items{
+.foot-items {
   margin-left: 2rem;
   padding-top: 1rem;
   font-weight: bolder;
