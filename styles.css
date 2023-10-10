@@ -57,27 +57,50 @@ video::-webkit-media-controls-panel {
 .site-logo {
   margin-left: 2rem;
   font-size: 1.5rem;
+  padding: .5rem;
   text-decoration: underline;
+  background-color: black;
 }
 
 @media (max-width: 991px) {
   .site-logo {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 767px) {
   .site-logo {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 599px) {
   .site-logo {
-    font-size: .6rem;
+    font-size: .8rem;
   }
 }
 
+@keyframes logoAnimation {
+  0%{
+color: aqua;
+  }
+  25%{
+    color: violet;
+  }
+  50%{
+color: rgb(162, 80, 239);
+  }
+  75%{
+    color: tomato;
+  }
+  100%{
+color: rgb(133, 252, 13);
+  }
+}
+
+.site-logo{
+  animation: logoAnimation 3s infinite ;
+}
 
 .site-menu {
   display: inline;
